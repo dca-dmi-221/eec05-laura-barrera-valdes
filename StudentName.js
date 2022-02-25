@@ -15,15 +15,27 @@ la variación, es lo mismo Carro, CARRO o carro.*/
 let testTargetWordA = "Sabrosura";
 let testTargetWordB = "Sazón";
 let testTargetWordC = "Tempurado";
-let testWordsList = [
-    "Sabr0sura",
-    "Gozadera",
-    "ritmo",
-    "TEMPURADO",
-    "SAZON",
-    "Chevere",
-    "Meneo",
-];
+let siEstaEnLista = false;
+
+function buscaPalabraEnLista(buscala){
+    let testWordsList = [
+        "Sabr0sura",
+        "Gozadera",
+        "ritmo",
+        "TEMPURADO",
+        "SAZON",
+        "Chevere",
+        "Meneo",
+    ];
+    for (let i=0; i<testWordsList.length;i++){
+        actual = testWordsList[i];
+        if(testTargetWordC===actual){
+            siEstaEnLista = true;
+        }
+    }
+    return siEstaEnLista;
+}
+console.log(siEstaEnLista);
 
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
