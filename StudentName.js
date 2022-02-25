@@ -29,7 +29,7 @@ function buscaPalabraEnLista(buscala){
     ];
     for (let i=0; i<testWordsList.length;i++){
         actual = testWordsList[i];
-        if(testTargetWordC===actual){
+        if(testTargetWordC.toLowerCase()===actual.toLowerCase()){
             siEstaEnLista = true;
         }
     }
