@@ -1,3 +1,5 @@
+// IMPORTANTE SELECCIONAR LO QUE VOY A CORRER!
+
 'use strict'
 
 /*Dada una cadena de texto (string) separe y muestre en consola los caracteres de forma desordenada uno por línea, 1 caracter a la vez.*/
@@ -15,15 +17,27 @@ la variación, es lo mismo Carro, CARRO o carro.*/
 let testTargetWordA = "Sabrosura";
 let testTargetWordB = "Sazón";
 let testTargetWordC = "Tempurado";
-let testWordsList = [
-    "Sabr0sura",
-    "Gozadera",
-    "ritmo",
-    "TEMPURADO",
-    "SAZON",
-    "Chevere",
-    "Meneo",
-];
+let siEstaEnLista = false;
+
+function buscaPalabraEnLista(buscala){
+    let testWordsList = [
+        "Sabr0sura",
+        "Gozadera",
+        "ritmo",
+        "TEMPURADO",
+        "SAZON",
+        "Chevere",
+        "Meneo",
+    ];
+    for (let i=0; i<testWordsList.length;i++){
+        actual = testWordsList[i];
+        if(testTargetWordC.toLowerCase()===actual.toLowerCase()){
+            siEstaEnLista = true;
+        }
+    }
+    return siEstaEnLista;
+}
+console.log(siEstaEnLista);
 
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
@@ -80,9 +94,10 @@ let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 
 function arrayJoiner(listA, listB) {
- // :)
+    let unirStrings = listA.concat(listB);
+    console.log(unirStrings);
 }
-
+arrayJoiner(wordArrayA, wordArrayB);
 
 /*Dado un arreglo de strings indicar qué posiciones del arreglo
 son anagramas de una palabra base (recibida como parámetro), retorne las posiciones en un arreglo.*/
